@@ -9,14 +9,17 @@ on:
       - master
 jobs:
   build:
-    name: Build python environment
+    strategy:
+      matrix:
+        python: [ '3.7', '3.8' ]
+    name: Build python ${{ matrix.python }} environment
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Setup python
         uses: actions/setup-python@v1
         with:
-          python-version: 3.7
+          python-version: ${{ matrix.python }}
           architecture: x64
       - name: Install requirements
         run: pip install -r ./requirements.txt
