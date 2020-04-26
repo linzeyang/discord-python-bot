@@ -1,3 +1,4 @@
+import logging
 import os
 
 import discord
@@ -5,16 +6,19 @@ import discord
 GUILD_NAME = "Patlabor"
 BOT_TOKEN = os.getenv("PYTHON_BOT_TOKEN", "")
 
+LOGGER = logging.getLogger(__name__)
+
 
 class MyClient(discord.Client):
     async def on_ready(self):
         guild = discord.utils.get(self.guilds, name=GUILD_NAME)
-        print(f"{self.user} has connected to guild: {guild.name}({guild.id})")
+        LOGGER.info(f"{self.user} has connected to guild: {guild.name}({guild.id})")
 
     async def on_message(self, message):
         if message.author == self.user:
-            print("I'm not gonna answer myself")
             return
+
+        LOGGER.info(f"Message received from {message.author}")
 
         if message.content == "ping":
             await message.channel.send("pong")
@@ -23,6 +27,10 @@ class MyClient(discord.Client):
 
 
 def main():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s:%(levelname)s:%(name)s: %(message)s",
+    )
     client = MyClient()
     client.run(BOT_TOKEN)
 
