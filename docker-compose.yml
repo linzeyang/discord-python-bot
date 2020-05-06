@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      environment:
-        PYTHONDONTWRITEBYTECODE: 1
-        PYTHONUNBUFFERED: 1
-        PYTHON_BOT_TOKEN: BOT_TOKEN_HERE
+    environment:
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONUNBUFFERED: 1
+      PYTHON_BOT_TOKEN: PUT_TOKEN_HERE
