@@ -1,18 +1,9 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
 FROM python:3.8.2-slim-buster
 
-# Keeps Python from generating .pyc files in the container
-ENV PYTHONDONTWRITEBYTECODE 1
-
-# Turns off buffering for easier container logging
-ENV PYTHONUNBUFFERED 1
-
-# discord python bot token
-ENV PYTHON_BOT_TOKEN BOT_TOKEN_HERE
-
 # Install pip requirements
 ADD requirements.txt .
-RUN python -m pip install -r requirements.txt
+RUN python -m pip install -U pip && python -m pip install -r requirements.txt
 
 WORKDIR /app
 ADD . /app

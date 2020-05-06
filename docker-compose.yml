@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.8'
 
 services:
   discordpythonbot:
@@ -6,3 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      environment:
+        PYTHONDONTWRITEBYTECODE: 1
+        PYTHONUNBUFFERED: 1
+        PYTHON_BOT_TOKEN: BOT_TOKEN_HERE

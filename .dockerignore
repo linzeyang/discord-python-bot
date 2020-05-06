@@ -2,6 +2,7 @@
 **/.classpath
 **/.dockerignore
 **/.env
+**/venv
 **/.git
 **/.gitignore
 **/.project
@@ -9,6 +10,7 @@
 **/.toolstarget
 **/.vs
 **/.vscode
+**/.idea
 **/*.*proj.user
 **/*.dbmdl
 **/*.jfm
@@ -22,4 +24,5 @@
 **/obj
 **/secrets.dev.yaml
 **/values.dev.yaml
+.github/
 README.md
