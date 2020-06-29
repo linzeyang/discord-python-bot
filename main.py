@@ -1,10 +1,8 @@
 from datetime import datetime
-import os
 
 import discord
 
-
-BOT_TOKEN = os.getenv("PYTHON_BOT_TOKEN", "")
+from bot import BOT_TOKEN
 
 
 def main():
@@ -13,7 +11,7 @@ def main():
     if BOT_TOKEN:
         print("Got token from sys env")
     else:
-        print("Not token found in sys env")
+        print("No token found in sys env")
 
 
 if __name__ == "__main__":
