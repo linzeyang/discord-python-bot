@@ -1,0 +1,14 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: pytest-asyncio
+    versions:
+    - 0.15.0
+  - dependency-name: discord-py
+    versions:
+    - 1.7.0
