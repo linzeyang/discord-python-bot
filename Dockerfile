@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.9.5-slim-buster
+FROM python:3.10.0-slim-bullseye
 
 # Install pip requirements
 ADD requirements.txt .
