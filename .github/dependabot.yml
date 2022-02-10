@@ -12,3 +12,11 @@ updates:
   - dependency-name: discord-py
     versions:
     - 1.7.0
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: monthly
+- package-ecosystem: docker
+  directory: "/"
+  shcedule:
+    interval: weekly
