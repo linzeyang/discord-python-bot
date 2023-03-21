@@ -3,7 +3,7 @@ import asyncio
 import pytest
 
 # Mark entire modules or classes with this asyncio marker.
-# Only test coroutines will be affecte.
+# Only test coroutines will be affected.
 pytestmark = pytest.mark.asyncio
 
 

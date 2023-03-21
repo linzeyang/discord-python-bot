@@ -1,4 +1,4 @@
-from datetime import datetime
+import sys
 
 import discord
 
@@ -6,12 +6,13 @@ from bot import BOT_TOKEN
 
 
 def main():
-    print(f"Hello world! Now is {datetime.now()}")
+    print(f"python version: {sys.version}")
     print(f"discord.py version {discord.__version__}")
-    if BOT_TOKEN:
-        print("Got token from sys env")
-    else:
-        print("No token found in sys env")
+
+    if not BOT_TOKEN:
+        raise Exception("No token found in sys env")
+
+    print("Got token from sys env")
 
 
 if __name__ == "__main__":
