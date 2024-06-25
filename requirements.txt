@@ -1,5 +1,5 @@
 coverage==7.5.3
-discord.py==2.3.2
+discord.py==2.4.0
 pytest==8.2.2
 pytest-asyncio==0.23.7
 pytest-cov==5.0.0
