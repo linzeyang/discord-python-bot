@@ -1,5 +1,5 @@
 # For more information, please refer to https://aka.ms/vscode-docker-python
-FROM python:3.13.0-slim-bookworm
+FROM python:3.13.1-slim-bookworm
 
 # Install pip requirements
 ADD requirements.txt .
